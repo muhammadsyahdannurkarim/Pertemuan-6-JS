@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Kalkulator Sederhana</title>
+  </head>
+  <body>
+    <div>
+      <center>
+        <fieldset>
+          <h2>KALKULATOR SEDERHANA</h2>
+          <input placeholder="Masukkan Angka Pertama" type="number" id="angka1" />
+          <input placeholder="Masukkan Angka kedua" type="number" id="angka2" /><br /><br />
+          <select name="" id="operator">
+            <option value="+">+(Tambah)</option>
+            <option value="-">-(Kurang)</option>
+            <option value="*">*(Kali)</option>
+            <option value="/">/(Bagi)</option>
+          </select>
+          <button id="submit">submit</button><br /><br />
+          <span>Hasil :</span>
+          <span id="hasil">...</span>
+        </fieldset>
+      </center>
+    </div>
+  </body>
+  <script>
+    const angka1 = document.getElementById("angka1");
+    const angka2 = document.getElementById("angka2");
+    const operator = document.getElementById("operator");
+    const hasil = document.getElementById("hasil");
+    const submit = document.getElementById("submit");
+
+    submit.addEventListener("click", function () {
+      hasil.innerText = eval(angka1.value + operator.value + angka2.value);
+    });
+  </script>
+</html>
